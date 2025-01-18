@@ -1,4 +1,10 @@
-local repos = ''
+local settings = {
+    ['keybinds'] = {
+        ['show_command_line'] = Enum.KeyCode.Comma
+    }
+}
+
+local repos = 'https://raw.githubusercontent.com/IDKdir/wtrb/refs/heads/main'
 
 local function import(url)
     local s, e = pcall(function()
@@ -9,4 +15,7 @@ local function import(url)
     end
 end
 
-getgenv().import = import
+getgenv()['import'] = import
+getgenv()['settings'] = settings
+
+import('/main.lua')
