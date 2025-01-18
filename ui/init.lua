@@ -25,4 +25,8 @@ Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0, 0, -7.02325583, 0)
 Frame.Size = UDim2.new(1, 0, 7.02325583, 0)
 
-getgenv().CommandGui = CommandGui
+getgenv()['GUI'] = {
+    ['CommandGui'] = CommandGui,
+    ['CommandLine'] = CommandLine,
+    ['Frame'] = Frame
+}

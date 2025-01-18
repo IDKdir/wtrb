@@ -3,3 +3,4 @@ if not import then
 end
 
 import('/ui/init.lua')
+import('/ui/keybinds.lua')
