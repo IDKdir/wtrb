@@ -1,8 +1,14 @@
+local CoreGui = game:GetService('CoreGui')
+if CoreGui:FindFirstChild('CommandGui') then
+    CoreGui['CommandGui']:Destroy()
+end
+
 local CommandGui = Instance.new("ScreenGui")
 local CommandLine = Instance.new("TextBox")
 local Frame = Instance.new("Frame")
 
 CommandGui.Parent = game:GetService('CoreGui')
+CommandGui.Name = 'CommandGui'
 CommandGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 CommandLine.Parent = CommandGui
